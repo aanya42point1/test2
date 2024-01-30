@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal - AR.js</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/demos/demo-portal-door/src/threex-portal-door.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/demos/demo-portal-door/src/aframe-portal-door.js"></script>
+</head>
+
+<!-- Nathan Stevens - 10/31/18 Portal AR.js example
+Using A-Frame library: https://aframe.io/
+Using AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js
+Uses custom AR marker-->
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam;'>
+        <a-portal-door url='https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg' position='0 0 -1' scale='1 1 1' rotation='0 0 0'>
+            <!-- <a-animation attribute="rotation" to="0 360 0" dur="15000" easing="linear" -->
+                         <!-- repeat="indefinite"></a-animation> -->
+        </a-portal-door>        
+        <a-text value="Nathan Stevens\nAR.js example\nAnimated Two-Way Portal" position="0 .1 1" align="center" rotation="-90 0 0" color="#00ff00"></a-text>
+        <a-marker-camera id="myCamera" type="pattern" url="pattern-marker.patt"></a-marker-camera>
+    </a-scene>
+</body>
+</html>
